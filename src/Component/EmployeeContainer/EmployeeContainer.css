@@ -1,0 +1,35 @@
+.employee-container {
+	display: grid;
+	grid-template-columns: auto 25%;
+	grid-gap: 10px;
+}
+.employees {
+	border-right: 1px solid lightgray;
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 768px) {
+	.employees {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.employee-container {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+@media (max-width: 425px) {
+	.employees {
+		display: grid;
+		grid-template-columns: auto;
+	}
+
+	.employee-container {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}

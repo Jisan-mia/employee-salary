@@ -1,0 +1,137 @@
+.calculation {
+	text-align: left;
+	/* width: 21%; */
+	height: 350px;
+	background-color: white;
+	padding: 10px 15px;
+	padding-bottom: 20px;
+	display: inline-table;
+	box-shadow: 0 0 15px 5px rgba(25, 55, 55, 0.1);
+	margin: 16px 20px 0 6px;
+}
+
+.main-title {
+	position: relative;
+}
+.main-title:after {
+	position: absolute;
+	content: "";
+	bottom: -2px;
+	margin: 0 -37%;
+	width: 39%;
+	height: 2px;
+	background-color: rgb(233, 152, 46);
+}
+.title {
+	text-align: center;
+	line-height: 10px;
+}
+.title h3 {
+	font-weight: 500;
+	font-size: 22px;
+}
+.title h3:last-child {
+	font-size: 17px;
+}
+
+.addedInfo,
+.total {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	line-height: 8px;
+	text-align: justify;
+}
+
+.total {
+	position: relative;
+}
+.total::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: rgb(31, 29, 28);
+	margin-left: -6px;
+	margin-top: 9px;
+}
+
+@media (max-width: 768px) {
+	.calculation {
+		padding: 5px 5px;
+		padding-bottom: 48px;
+		display: inline-table;
+
+		margin: 16px 10px 0 6px;
+		width: 85%;
+		margin: 20px auto;
+		text-align: center;
+	}
+	.total::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+	}
+	.main-title:after {
+		position: absolute;
+		content: "";
+		bottom: -2px;
+		margin: 0 -28%;
+	}
+	.addedInfo,
+	.total {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		line-height: 8px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 425px) {
+	.calculation {
+		padding: 5px 5px;
+		padding-bottom: 48px;
+		display: inline-table;
+		margin: 20px;
+		height: 300px;
+		text-align: center;
+	}
+	.total {
+		padding: 5px;
+	}
+	.total::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: rgb(31, 29, 28);
+		margin-left: -6px;
+		margin-top: 13px;
+	}
+	.addedInfo,
+	.total {
+		text-align: center;
+	}
+}
+
+@media (max-width: 320px) {
+	.calculation {
+		padding: 5px 5px;
+		padding-bottom: 48px;
+		display: inline-table;
+		margin: 20px;
+		height: 300px;
+	}
+	.total {
+		padding: 5px;
+	}
+	.total::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: rgb(31, 29, 28);
+		margin-left: -6px;
+		margin-top: 13px;
+	}
+}
